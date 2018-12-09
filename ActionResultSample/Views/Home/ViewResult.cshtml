@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "ViewResult";
+}
+
+<h2>ViewResult</h2>
+
+<p>
+    基本的 ActionResult
+    完整的寫法為
+    <code>
+        return ViewResult();
+    </code>
+    常用的簡寫為 @Model
+    <code>
+        return View();
+    </code>
+</p>
+<pre>
+    ViewResult View() //方法 1
+    ViewResult View(object model) //方法 2
+    ViewResult View(string viewName) //方法 3
+    ViewResult View(string viewName, object model) //方法 4
+    ViewResult View(string viewName, string masterName, object model) //方法 5
+</pre>

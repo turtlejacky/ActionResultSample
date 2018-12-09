@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>SkillTree</h1>
+    <p class="lead">本範例介紹 ASP.NET MVC 內建的各種 ActionResult。</p>
+    <p><a href="http://skilltree.my" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>ViewResult</h2>
+        <p>
+            最常使用到的 ActionResult，利用 ViewEngine 與 ViewPage 等技術，將 HTML 結果輸出到前端瀏覽器做呈現。
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("ViewResult")">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>PartialViewResult</h2>
+        <p> PartialViewResult 與 ViewResult 是相同的功能，最主要的差異在於 PartialViewResult 並不會有主版頁面，也就是不會載入 _Layout.cshtml，
+只會輸出指定 View 的內容。</p>
+        <p><a class="btn btn-default" href="@Url.Action("PartialViewResult")">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>ContenResult</h2>
+        <p>主要適用於回傳文字格式的資料，或是簡單的訊息回應。</p>
+        <p><a class="btn btn-default" href="@Url.Action("ContenResult")">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>EmptyResult</h2>
+        <p>
+            回傳空白的內容。
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("EmptyResult")">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>HttpStatusCodeResult</h2>
+        <p>自訂回傳 Http Response 的 Status，如成功（200）或是伺服器錯誤（500）等不同的錯誤。</p>
+        <p><a class="btn btn-default" href="@Url.Action("HttpStatusCodeResult")">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>JavaScriptResult</h2>
+        <p>回傳 Javascript 格式的資料。</p>
+        <p><a class="btn btn-default" href="@Url.Action("JavaScript")">Learn more &raquo;</a></p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>JsonResult</h2>
+        <p>
+            輸出 JSON 格式的內容。
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("JsonResult")">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>JsonResult</h2>
+        <p>
+            輸出 JSON 格式的內容。(POST)
+        </p>
+        <p><a class="btn btn-default" href="@Url.Action("PostJsonResult")">Learn more &raquo;</a></p>              
+    </div>
+    <div class="col-md-4">
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>RedirectResult</h2>
+        <p>傳入網址參數做網址轉換。 </p>
+        <p><a class="btn btn-default" href="@Url.Action("RedirectResult")">Learn more &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>RedirectToRouteResult</h2>
+        <p>傳入 Route 名稱做網址轉換。 </p>
+        <p><a class="btn btn-default" href="@Url.Action("RedirectToRouteResult")">Learn more &raquo;</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>RedirectToAction</h2>
+        <p>傳入 Controller 與 Action 名稱做網址轉換。 </p>
+        <p><a class="btn btn-default" href="@Url.Action("RedirectToActionMethod")">Learn more &raquo;</a>
+        </p>
+    </div>
+</div>
+<div class="row">
+
+    <div class="col-md-4">
+        <h2>FileContentResult</h2>
+        <p>以傳送 Byte Array 的方式輸出檔案。</p>
+        <p><a class="btn btn-default" href="@Url.Action("FileContentResult")">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>FilePathResult</h2>
+        <p>以傳送檔案路徑的方式輸出檔案。</p>
+        <p><a class="btn btn-default" href="@Url.Action("FilePathResult")">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>FileStreamResult</h2>
+        <p>以傳送 Stream 內容的方式輸出檔案，與 FilePathResult 和 FileContentResult 的差異為傳遞的參數不同，而這三各類別都是繼承於 FileResult 。</p>
+        <p><a class="btn btn-default" href="@Url.Action("FileStreamResult")">Learn more &raquo;</a></p>
+    </div>
+</div>

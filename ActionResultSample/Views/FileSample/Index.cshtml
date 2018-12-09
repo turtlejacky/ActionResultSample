@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>FileResult Sample</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>FileContentResult</h2>   
+        <p>將二進位檔案的內容傳送至回應。</p>
+        <p><a class="btn btn-default" href="@Url.Action("Sample1")">Learn more &raquo;</a></p>
+    </div> 
+    <div class="col-md-4">
+        <h2>FileStreamResult</h2> 
+        <p>使用 Stream 執行個體將二進位內容傳送至回應。</p>
+        <p><a class="btn btn-default" href="@Url.Action("Sample2")">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>FilePathResult</h2>
+        <p>將檔案的內容傳送至回應。</p>
+        <p><a class="btn btn-default" href="@Url.Action("Sample3")">Learn more &raquo;</a></p>
+    </div>
+</div>

@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "ViewResult";
+}
+
+<h2>JsonResult - POST 取得資料</h2>
+
+<p>
+    <input type="button" id="btn1" class="btn btn-default" value="POST 取得資料 一" />
+    <input type="button" id="btn2" class="btn btn-default" value="POST 取得資料 二" />
+</p>
+<pre id="JsonValue"></pre>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#btn1').on('click', function () {
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("PostJsonValue1", "Home")',
+                data: "name=John&location=Boston",
+                dataType: "json",
+                success: function (response) {
+                    if (response) {
+                        var result = "name=" + response.name + ', MeMber=' + response.MeMber;
+                        $('#JsonValue').html(result);
+                    }
+                }
+            });
+        });
+        $('#btn2').on('click', function () {
+            var result = new Array();
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("PostJsonValue2", "Home")',
+                data: "name=John&location=Boston",
+                dataType: "json",
+                success: function (response) {
+                    if (response) {
+                        $.each(response, function (i, item) {
+                            var inner =
+                            {
+                                CustomerID: item.CustomerID,
+                                CompanyName: item.CompanyName,
+                                ContactName: item.ContactName
+                            }
+                            result.push(inner);
+                        });
+                        var details = result.length + "<br/>";
+                        $.each(result, function (i, item) {
+                            details += item["CustomerID"] + "|" + item["CompanyName"] + "|" + item["ContactName"] + "<br/>";
+                        });
+                        $('#JsonValue').html(details);
+                    }
+                }
+            });
+        });
+    });
+</script>

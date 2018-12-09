@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ActionResultSample", "ActionResultSample\ActionResultSample.csproj", "{317961B2-0B9B-494F-9009-6D79367FB23B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{6AEDBDBE-6890-4665-8B38-CA1762B265F2}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{317961B2-0B9B-494F-9009-6D79367FB23B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{317961B2-0B9B-494F-9009-6D79367FB23B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{317961B2-0B9B-494F-9009-6D79367FB23B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{317961B2-0B9B-494F-9009-6D79367FB23B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(CodealikeProperties) = postSolution
+		SolutionGuid = 3033bd88-ccf2-4cae-a00c-1a61477133f5
+	EndGlobalSection
+EndGlobal

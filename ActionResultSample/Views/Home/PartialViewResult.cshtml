@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "PartialViewResult";
+}
+
+<h2>PartialViewResult</h2>
+
+<p>
+    基本的部分頁面回傳
+    完整的寫法為
+    <code>
+        return PartialView();
+    </code>
+    常用的寫法
+    <code>
+        return View();
+    </code>
+    但是直接 return View 會有潛在問題。
+</p>
+<pre>
+    ViewResult PartialView() //方法 1 
+    ViewResult PartialView(object model) //方法 2
+    ViewResult PartialView(string partialViewName, object model) //方法 3 
+</pre>
